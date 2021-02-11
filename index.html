@@ -610,7 +610,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="get-started-button wow bounceInDown" data-wow-delay="0.5s">
-                        <a href="#contacto">¡Quiero saber más!</a>
+                        <a href="#" onclick="$('#masInfoModal').modal('toggle'); return false;">¡Quiero saber más!</a>
                     </div>
                 </div>
             </div>
@@ -811,6 +811,28 @@
     </section>
     <!-- ***** Condiciones ***** -->
 
+    <div class="modal fade" id="masInfoModal" tabindex="-1" role="dialog" aria-labelledby="masInfoModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="masInfoModalTitle">¿Cómo funciona CriptoPagos?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nuestro servicio está diseñado exclusivamente para empresas chilenas legalmente constituídas. Que deseen cobrar de manera electrónica cotizaciones, boletas o facturas emitidas a sus clientes.</p>
+                        <p>Cuando un cliente realiza un pago con alguno de los medios que tenemos disponibles (incluído criptomonedas), nuestra plataforma, LibreDTE, generará al cliente final una boleta o factura según corresponda.</p>
+                        <p>Cada contribuyente debe realizar un contrato directo con cada proveedor de medios de pagos (ej: CryptoCompra de CryptoMKT o WebPay). Luego, en LibreDTE sólo se hará la configuración para que se habilite el medio de pago y se pueda cobrar.</p>
+                        <p>Nosotros jamás tendremos acceso a tu dinero.</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ***** Contact Us Area Start ***** -->
     <section class="footer-contact-area section_padding_100 clearfix" id="contacto">
         <div class="container">
@@ -842,6 +864,9 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <button type="button" class="btn btn-lg submit-btn mb-4" data-toggle="modal" data-target="#masInfoModal">
+                        ¿Cómo funcionan los pagos electrónicos con CriptoPagos?
+                    </button>
                     <!-- Form Start-->
                     <div class="contact_from">
                         <!--<form action="https://app.criptopagos.cl/support/" method="post">-->
